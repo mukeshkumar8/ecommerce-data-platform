@@ -58,6 +58,56 @@ try:
 
 
     # ==========================================
+    # 4. LOAD CLEANED CSV DATA INTO POSTGRESQL
+    # ==========================================
+
+    logger.info("Loading cleaned CSV data into PostgreSQL...")
+    print("Loading cleaned CSV data into PostgreSQL...")
+
+    csv_dir = "data/cleaned"
+
+    customers_csv = pd.read_csv(f"{csv_dir}/customers_cleaned.csv")
+    products_csv = pd.read_csv(f"{csv_dir}/products_cleaned.csv")
+    orders_csv = pd.read_csv(f"{csv_dir}/orders_cleaned.csv")
+    order_items_csv = pd.read_csv(f"{csv_dir}/order_items_cleaned.csv")
+    payments_csv = pd.read_csv(f"{csv_dir}/payments_cleaned.csv")
+
+    cur = conn.cursor()
+
+    cur.execute("TRUNCATE TABLE payments, order_items, orders, products, customers RESTART IDENTITY CASCADE")
+
+    cur.executemany(
+        "INSERT INTO customers (customer_id, first_name, last_name, email, city) VALUES (%s, %s, %s, %s, %s)",
+        customers_csv[["customer_id", "first_name", "last_name", "email", "city"]].itertuples(index=False, name=None)
+    )
+
+    cur.executemany(
+        "INSERT INTO products (product_id, product_name, category, price, stock_quantity) VALUES (%s, %s, %s, %s, %s)",
+        products_csv[["product_id", "product_name", "category", "price", "stock_quantity"]].itertuples(index=False, name=None)
+    )
+
+    cur.executemany(
+        "INSERT INTO orders (order_id, customer_id, order_date, total_amount, status) VALUES (%s, %s, %s, %s, %s)",
+        orders_csv[["order_id", "customer_id", "order_date", "total_amount", "status"]].itertuples(index=False, name=None)
+    )
+
+    cur.executemany(
+        "INSERT INTO order_items (order_item_id, order_id, product_id, quantity, unit_price) VALUES (%s, %s, %s, %s, %s)",
+        order_items_csv[["order_item_id", "order_id", "product_id", "quantity", "unit_price"]].itertuples(index=False, name=None)
+    )
+
+    cur.executemany(
+        "INSERT INTO payments (payment_id, order_id, payment_date, payment_method, amount, payment_status) VALUES (%s, %s, %s, %s, %s, %s)",
+        payments_csv[["payment_id", "order_id", "payment_date", "payment_method", "amount", "payment_status"]].itertuples(index=False, name=None)
+    )
+
+    conn.commit()
+    cur.close()
+
+    logger.info("CSV data loaded successfully into PostgreSQL")
+    print("CSV data loaded successfully into PostgreSQL!")
+
+    # ==========================================
     # 4. READ DATA FROM POSTGRESQL
     # ==========================================
 
