@@ -1,0 +1,6 @@
+table,total_records,duplicate_records
+customers,5,0
+products,5,0
+orders,5,0
+order_items,8,0
+payments,5,0

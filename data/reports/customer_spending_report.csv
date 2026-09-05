@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,city,total_amount
+1,Mukesh,Kumar,Mumbai,57400.0
+3,Amit,Patel,Ahmedabad,55000.0
+2,Rahul,Sharma,Delhi,8700.0
+5,Neha,Verma,Bangalore,7500.0
+4,Priya,Singh,Pune,3000.0

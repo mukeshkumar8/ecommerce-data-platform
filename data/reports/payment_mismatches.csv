@@ -1,0 +1,2 @@
+order_id,customer_id,order_date,total_amount,status,amount,payment_difference
+4,4,2026-09-04 17:08:42.059571,3000.0,Shipped,3400.0,-400.0

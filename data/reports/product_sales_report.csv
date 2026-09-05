@@ -1,0 +1,5 @@
+product_id,product_name,category,total_quantity,total_sales
+1,Laptop,Electronics,2,110000.0
+4,Office Chair,Furniture,2,15000.0
+2,Wireless Mouse,Electronics,4,4800.0
+3,Keyboard,Electronics,1,1800.0

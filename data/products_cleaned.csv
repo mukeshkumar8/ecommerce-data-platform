@@ -1,0 +1,6 @@
+product_id,product_name,category,price,stock_quantity,created_at
+1,Laptop,Electronics,55000.0,20,2026-09-04 17:08:26.082239
+2,Wireless Mouse,Electronics,1200.0,50,2026-09-04 17:08:26.082239
+3,Keyboard,Electronics,1800.0,35,2026-09-04 17:08:26.082239
+4,Office Chair,Furniture,7500.0,15,2026-09-04 17:08:26.082239
+5,Backpack,Accessories,2200.0,40,2026-09-04 17:08:26.082239

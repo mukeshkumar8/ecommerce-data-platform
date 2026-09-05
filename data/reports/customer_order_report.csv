@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,email,city,order_id,order_date,total_amount,status
+1,Mukesh,Kumar,mukesh@gmail.com,Mumbai,1,2026-09-04 17:08:42.059571,57400.0,Completed
+2,Rahul,Sharma,rahul@gmail.com,Delhi,2,2026-09-04 17:08:42.059571,8700.0,Completed
+3,Amit,Patel,amit@gmail.com,Ahmedabad,3,2026-09-04 17:08:42.059571,55000.0,Pending
+4,Priya,Singh,priya@gmail.com,Pune,4,2026-09-04 17:08:42.059571,3000.0,Shipped
+5,Neha,Verma,neha@gmail.com,Bangalore,5,2026-09-04 17:08:42.059571,7500.0,Completed

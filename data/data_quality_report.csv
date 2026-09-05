@@ -1,0 +1,9 @@
+check,records_found
+Duplicate Customers,0
+Duplicate Products,0
+Duplicate Orders,0
+Duplicate Payments,0
+Invalid Products,0
+Invalid Orders,0
+Invalid Order Items,0
+Invalid Payments,0

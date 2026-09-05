@@ -1,0 +1,6 @@
+payment_id,order_id,payment_date,payment_method,amount,payment_status
+1,1,2026-09-04 17:09:12.339303,Upi,57400.0,Paid
+2,2,2026-09-04 17:09:12.339303,Credit Card,8700.0,Paid
+3,3,2026-09-04 17:09:12.339303,Cash On Delivery,55000.0,Pending
+4,4,2026-09-04 17:09:12.339303,Upi,3400.0,Paid
+5,5,2026-09-04 17:09:12.339303,Debit Card,7500.0,Paid

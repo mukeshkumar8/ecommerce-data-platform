@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,email,city,created_at
+1,Mukesh,Kumar,mukesh@gmail.com,Mumbai,2026-09-04 17:08:06.506674
+2,Rahul,Sharma,rahul@gmail.com,Delhi,2026-09-04 17:08:06.506674
+3,Amit,Patel,amit@gmail.com,Ahmedabad,2026-09-04 17:08:06.506674
+4,Priya,Singh,priya@gmail.com,Pune,2026-09-04 17:08:06.506674
+5,Neha,Verma,neha@gmail.com,Bangalore,2026-09-04 17:08:06.506674
